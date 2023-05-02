@@ -132,7 +132,6 @@ class KapalController extends Controller
     {
         $kapal = Kapal::findOrFail($id);
 
-
         if($request->file('foto_kapal')) {
             $image = $request->file('foto_kapal');
             $imageName = time(). "_". $image->getClientOriginalName();
@@ -142,7 +141,6 @@ class KapalController extends Controller
                 'foto_kapal' => asset('image/' . $imageName),
             ]);
         }
-
 
         $kapal = $kapal->update([
             'kode_kapal' => $request->kode_kapal,

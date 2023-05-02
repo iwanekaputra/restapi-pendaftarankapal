@@ -24,7 +24,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __invoke(Request $request)
-    {
+    {;
         //set validation
         $validator = Validator::make($request->all(), [
             'name'      => 'required',

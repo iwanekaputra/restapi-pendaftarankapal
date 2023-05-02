@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "263b27f8-8c15-403b-8de7-6bbdbde48109",
+		"name": "restapi-pendaftarankapal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16498406"
+	},
+	"item": [
+		{
+			"name": "get kapal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"iwanekaputra@gmail.com\",\r\n    \"subject\" : \"es\",\r\n    \"message\" : \"kasd\",\r\n    \"token\" : \"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDA5NjUyLCJleHAiOjE2ODMwMTMyNTIsIm5iZiI6MTY4MzAwOTY1MiwianRpIjoiSlNTM0tpNThYdVJ4RTF3dyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ioYJc4ZsNSZ1RXWi9_FrQ7HOG2Iv46Lyunt0d3-5VZw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add kapal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "kode_kapal",
+							"value": "123412",
+							"type": "text"
+						},
+						{
+							"key": "nama_kapal",
+							"value": "iwan",
+							"type": "text"
+						},
+						{
+							"key": "nama_pemilik",
+							"value": "wanwan",
+							"type": "text"
+						},
+						{
+							"key": "alamat_pemilik",
+							"value": "rumah",
+							"type": "text"
+						},
+						{
+							"key": "ukuran_kapal",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "kapten",
+							"value": "mang",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_anggota",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "foto_kapal",
+							"type": "file",
+							"src": "/C:/Users/Iwan/Downloads/startcross.jpeg"
+						},
+						{
+							"key": "nomor_izin",
+							"value": "1212",
+							"type": "text"
+						},
+						{
+							"key": "dokumen_perizinan",
+							"value": "owk.dock",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal"
+					],
+					"query": [
+						{
+							"key": "kode_kapal",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update kapal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "kode_kapal",
+							"value": "123412",
+							"type": "text"
+						},
+						{
+							"key": "nama_kapal",
+							"value": "iwan eka putra",
+							"type": "text"
+						},
+						{
+							"key": "nama_pemilik",
+							"value": "wanwan",
+							"type": "text"
+						},
+						{
+							"key": "alamat_pemilik",
+							"value": "rumah",
+							"type": "text"
+						},
+						{
+							"key": "ukuran_kapal",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "kapten",
+							"value": "mang",
+							"type": "text"
+						},
+						{
+							"key": "jumlah_anggota",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "foto_kapal",
+							"value": "http://127.0.0.1:8000/image/1683015246_startcross.jpeg",
+							"type": "text"
+						},
+						{
+							"key": "nomor_izin",
+							"value": "1212",
+							"type": "text"
+						},
+						{
+							"key": "dokumen_perizinan",
+							"value": "owk.dock",
+							"type": "text"
+						},
+						{
+							"key": "foto_kapal",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "tes",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete kapal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/kapal/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"kapal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "iwan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account/verify/{token}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account",
+						"verify",
+						"{token}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user not verify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/verify-user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"verify-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify user by otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/otp?otp=WgeTFL",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"otp"
+					],
+					"query": [
+						{
+							"key": "otp",
+							"value": "WgeTFL"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin verify kapal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/verify-kapal/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"verify-kapal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin verify user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjgzMDE1MTg3LCJleHAiOjE2ODMwMTg3ODcsIm5iZiI6MTY4MzAxNTE4NywianRpIjoiQ2NNUHpIZ3FBZkZ3WFY4cSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X9LWTdURTyuGvQQMBIePkf4cCvJ5liAVvorG2uKu1I0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/verify-user/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"verify-user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

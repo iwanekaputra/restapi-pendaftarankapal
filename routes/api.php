@@ -38,13 +38,13 @@ Route::get('success', function () {
 
 Route::get('admin/verify-user', [AdminController::class, 'notificationVerifiedUser'])->name('admin.notification');
 Route::get('admin/verify-kapal/{id}', [AdminController::class, 'verifyKapal']);
-Route::put('admin/verify-user/{id}', [AdminController::class, 'verifiedUser'])->middleware(['role:admin', 'auth:api']);
+Route::get('admin/verify-user/{id}', [AdminController::class, 'verifiedUser'])->middleware(['role:admin', 'auth:api']);
 
 Route::post('user/otp', [RegisterController::class, 'otp']);
 
 Route::get('kapal', [KapalController::class, 'index'])->middleware(['role:user|admin', 'auth:api']);
 Route::post('kapal', [KapalController::class, 'store'])->middleware(['role:user|admin', 'auth:api']);
-Route::put('kapal/{id}', [KapalController::class, 'update'])->middleware(['role:user|admin', 'auth:api']);
+Route::post('kapal/{id}', [KapalController::class, 'update'])->middleware(['role:user|admin', 'auth:api']);
 Route::delete('kapal/{id}', [KapalController::class, 'destroy'])->middleware(['role:admin', 'auth:api']);
 
 
